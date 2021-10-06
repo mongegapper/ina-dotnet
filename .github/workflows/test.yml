@@ -1,0 +1,7 @@
+name: Test
+on:  push
+jobs:
+  tarea1:
+    name: Tarea 1
+    steps:
+      - run "reba 1"
