@@ -3,6 +3,7 @@ on: push
 jobs:
   Compilacion:
     runs-on: windows-latest
+    environment: PRUEBAS
     steps:
       - run: echo "El secreto Google es ${{ secrets.GOOGLE_TOKEN }}"  
       - uses: actions/checkout@v2
