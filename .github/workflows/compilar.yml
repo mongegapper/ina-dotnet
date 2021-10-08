@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.301'
+          dotnet-version: '3.1.x'
       - name: Instalamos dependencias de NET  
         run: dotnet restore
       - name: Compilamos
@@ -19,6 +19,6 @@ jobs:
       - name: Publicar un release
         uses: elgohr/Github-Release-Action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: Nuevo Release 
